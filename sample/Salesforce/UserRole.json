@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com UserRole object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/UserRole"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UserRole"
+      }
+    }
+  ],
+  "definitions": {
+    "UserRole": {
+      "title": "UserRole",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "CaseAccessForAccountOwner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ContactAccessForAccountOwner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DeveloperName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ForecastUserId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MayForecastManagerShare": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OpportunityAccessForAccountOwner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ParentRoleId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PortalAccountId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PortalAccountOwnerId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PortalType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RollupDescription": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

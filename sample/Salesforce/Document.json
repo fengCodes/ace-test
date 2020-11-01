@@ -1,0 +1,183 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com Document object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Document"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Document"
+      }
+    }
+  ],
+  "definitions": {
+    "Document": {
+      "title": "Document",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "AuthorId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Body": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "byte"
+        },
+        "BodyLength": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "ContentType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DeveloperName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "FolderId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsBodySearchable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsInternalUseOnly": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsPublic": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Keywords": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastReferencedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastViewedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NamespacePrefix": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

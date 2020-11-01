@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com UserProvisioningRequest object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/UserProvisioningRequest"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UserProvisioningRequest"
+      }
+    }
+  ],
+  "definitions": {
+    "UserProvisioningRequest": {
+      "title": "UserProvisioningRequest",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "AppName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ApprovalStatus": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ConnectedAppId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExternalUserId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ManagerId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Operation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OwnerId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SalesforceUserId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ScheduleDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "State": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UserProvAccountId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UserProvConfigId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

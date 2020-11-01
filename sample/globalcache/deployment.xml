@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploymentPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://ibm.com/ws/objectgrid/deploymentPolicy ../deploymentPolicy.xsd" 
+  xmlns="http://ibm.com/ws/objectgrid/deploymentPolicy"> 
+ <objectgridDeployment objectgridName="WMB">
+  <mapSet name="mapSet" numberOfPartitions="13" minSyncReplicas="0" maxSyncReplicas="1" replicaReadEnabled="true" >
+   <map ref="USER.PESSIMISTIC.*"/>
+   <map ref="USER.OPTIMISTIC.*"/>
+   <map ref="USER.NONE.*"/>
+   <map ref="SYSTEM.BROKER.*"/>
+   <zoneMetadata>
+    <shardMapping shard="P" zoneRuleRef="wmbRule"/>
+    <shardMapping shard="S" zoneRuleRef="wmbRule"/>
+    <zoneRule name="wmbRule" exclusivePlacement="false">
+     <zone name="WMBZone" />
+    </zoneRule>
+   </zoneMetadata>
+  </mapSet>
+ </objectgridDeployment>
+</deploymentPolicy>

@@ -1,0 +1,194 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com Idea object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Idea"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Idea"
+      }
+    }
+  ],
+  "definitions": {
+    "Idea": {
+      "title": "Idea",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "Body": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Categories": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CommunityId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatorFullPhotoUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatorName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatorSmallPhotoUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsHtml": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsMerged": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastCommentDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastCommentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastReferencedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastViewedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NumComments": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "ParentIdeaId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RecordTypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "VoteScore": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "VoteTotal": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

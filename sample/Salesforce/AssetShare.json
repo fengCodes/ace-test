@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com AssetShare object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/AssetShare"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AssetShare"
+      }
+    }
+  ],
+  "definitions": {
+    "AssetShare": {
+      "title": "AssetShare",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "AssetAccessLevel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AssetId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RowCause": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UserOrGroupId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

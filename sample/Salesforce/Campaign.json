@@ -1,0 +1,236 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com Campaign object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Campaign"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Campaign"
+      }
+    }
+  ],
+  "definitions": {
+    "Campaign": {
+      "title": "Campaign",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "ActualCost": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "AmountAllOpportunities": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "AmountWonOpportunities": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "BudgetedCost": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CampaignMemberRecordTypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EndDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExpectedResponse": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExpectedRevenue": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IsActive": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastActivityDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastReferencedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastViewedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NumberOfContacts": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "NumberOfConvertedLeads": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "NumberOfLeads": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "NumberOfOpportunities": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "NumberOfResponses": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "NumberOfWonOpportunities": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "NumberSent": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "OwnerId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ParentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StartDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

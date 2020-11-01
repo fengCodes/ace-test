@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com SetupAuditTrail object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/SetupAuditTrail"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SetupAuditTrail"
+      }
+    }
+  ],
+  "definitions": {
+    "SetupAuditTrail": {
+      "title": "SetupAuditTrail",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "Action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DelegateUser": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Display": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Section": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

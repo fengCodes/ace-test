@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com OrderItem object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/OrderItem"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/OrderItem"
+      }
+    }
+  ],
+  "definitions": {
+    "OrderItem": {
+      "title": "OrderItem",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "AvailableQuantity": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EndDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ListPrice": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "OrderId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OrderItemNumber": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OriginalOrderItemId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PricebookEntryId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Quantity": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ServiceDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UnitPrice": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com Site object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Site"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Site"
+      }
+    }
+  ],
+  "definitions": {
+    "Site": {
+      "title": "Site",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "AdminId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AnalyticsTrackingCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ClickjackProtectionLevel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DailyBandwidthLimit": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "DailyBandwidthUsed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "DailyRequestTimeLimit": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "DailyRequestTimeUsed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "GuestUserId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MasterLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MonthlyPageViewsEntitlement": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OptionsAllowGuestSupportApi": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OptionsAllowHomePage": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OptionsAllowStandardAnswersPages": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OptionsAllowStandardIdeasPages": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OptionsAllowStandardLookups": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OptionsAllowStandardSearch": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OptionsEnableFeeds": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OptionsRequireHttps": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "SiteType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Subdomain": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UrlPathPrefix": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

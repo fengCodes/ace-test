@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com UserShare object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/UserShare"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UserShare"
+      }
+    }
+  ],
+  "definitions": {
+    "UserShare": {
+      "title": "UserShare",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "IsActive": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RowCause": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UserAccessLevel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UserId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UserOrGroupId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

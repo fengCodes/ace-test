@@ -1,0 +1,431 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com Order object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Order"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Order"
+      }
+    }
+  ],
+  "definitions": {
+    "Order": {
+      "title": "Order",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "AccountId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ActivatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ActivatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BillToContactId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BillingAddress": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AddressType"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "BillingCity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BillingCountry": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BillingGeocodeAccuracy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BillingLatitude": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "BillingLongitude": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "BillingPostalCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BillingState": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BillingStreet": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CompanyAuthorizedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CompanyAuthorizedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ContractId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CustomerAuthorizedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CustomerAuthorizedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EffectiveDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EndDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReductionOrder": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastReferencedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastViewedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OrderNumber": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OrderReferenceNumber": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OriginalOrderId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OwnerId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PoDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PoNumber": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Pricebook2Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ShipToContactId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ShippingAddress": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AddressType"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ShippingCity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ShippingCountry": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ShippingGeocodeAccuracy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ShippingLatitude": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ShippingLongitude": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ShippingPostalCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ShippingState": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ShippingStreet": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StatusCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TotalAmount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "AddressType": {
+      "title": "AddressType",
+      "additionalProperties": false,
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "countryCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geocodeAccuracy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "postalCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "stateCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "street": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "latitude": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "longitude": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

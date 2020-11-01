@@ -1,0 +1,60 @@
+Instructions for enabling global cache
+======================================
+
+The server.conf.yaml configuration files in this directory provide a number of sample scenarios for setting up the global cache.
+There is also an image file in each directory which shows the global cache architecture. For further details see the documentation. 
+
+basic_1_catalog_1_container
+---------------------------
+This scenario has one integration server which hosts both a catalog server and a container server. It is recommended for development purposes.
+
+1. Create an integration server called `IntegrationServer1`
+2. Copy the `GlobalCache` entry in `server.conf.yaml` into the `IntegrationServer1/server.config.yaml`
+
+When started IntegrationServer1 will be both a catalog server and a container server.
+
+
+basic_1_catalog_4_containers
+----------------------------
+The scenario uses four integration servers; one hosts both a catalog server and a container server, the other three integration servers host just a container server each.
+
+1. Create four integration servers called `IntegrationServer1`, `IntegrationServer2`, `IntegrationServer3` and `IntegrationServer4`
+2. Copy the `GlobalCache` entry in each `IntegrationServer<n>.server.conf.yaml` into the corresponding `IntegrationServer<n>/server.conf.yaml`
+
+When started IntegrationServer1 will be both a catalog server and a container server. IntegrationServer2, IntegrationServer3 and IntegrationServer 4 will container servers.
+
+This scenario is equivalent to the "default" cache policy in previous versions of IBM Integration Bus and Websphere Message Broker.
+It is also equivalent to the "policy_two_brokers" cache policy XML file which used one catalog server.
+
+
+basic_2_catalogs_4_containers
+-----------------------------
+The scenario has four integration servers. Two host both a catalog server and a container server. The other two integration servers host just a container server each.
+
+1. Create four integration servers called `IntegrationServer1`, `IntegrationServer2`, `IntegrationServer3` and `IntegrationServer4`
+2. Copy the `GlobalCache` entry in each `IntegrationServer<n>.server.conf.yaml` into the corresponding `IntegrationServer<n>/server.conf.yaml`
+
+When started IntegrationServer1 and IntegrationServer2 will be both a catalog server and a container server. IntegrationServer3 and IntegrationServer 4 will be container servers.
+
+This scenario is equivalent to the "policy_one_broker_ha" and "policy_two_brokers_ha" cache policy XML files in previous versions of IBM Integration Bus and Websphere Message Broker.
+It covers a similar high-availability configuration as the two XML files by making use of two catalog servers.
+
+
+ha_multi_instance
+-----------------
+The scenario has three integration servers. Two integration servers host both a catalog server and a container server.
+One integration server hosts just a container server and must be used as part of a multi-instance integration node.
+
+Note: A multi-instance integration node cannot be used to host an integration server with a catalog server
+
+1. Create two integration servers called `IntegrationServer1` and `IntegrationServer2`
+2. Copy the `GlobalCache` entry in each of `IntegrationServer1.server.conf.yaml` and `IntegrationServer2.server.conf.yaml` into the corresponding `IntegrationServer<n>/server.conf.yaml`
+3. Create a multi-instance integration node called `INODE` on two machines, following https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/be13682_.htm
+4. Create an integration server called `IntegrationServer3` under the multi-instance integration node
+5. Copy the `GlobalCache` entry in `IntegrationServer3.server.conf.yaml` into `<SharedWorkPath>/components/INODE/servers/IntegrationServer3/server.conf.yaml`
+6. Change `server1.mycompany.com` and `server2.mycompany.com` in the files to match the hostnames of the machines hosting the integration nodes
+
+When started IntegrationServer1 and IntegrationServer2 will be both a catalog server and a container server. IntegrationServer3 will be a container server.
+
+This scenario is equivalent to the "policy_multi_instance" cache policy XML file in previous versions of IBM Integration Bus and Websphere Message Broker.
+It covers a similar multi-instance integration node configuration as the XML file.

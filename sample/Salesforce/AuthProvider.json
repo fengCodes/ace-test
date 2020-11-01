@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com AuthProvider object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/AuthProvider"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AuthProvider"
+      }
+    }
+  ],
+  "definitions": {
+    "AuthProvider": {
+      "title": "AuthProvider",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "AuthorizeUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ConsumerKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ConsumerSecret": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DefaultScopes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DeveloperName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ErrorUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExecutionUserId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "FriendlyName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IconUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdTokenIssuer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LogoutUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OptionsIncludeOrgIdInId": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OptionsSendAccessTokenInHeader": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OptionsSendClientCredentialsInHeader": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ProviderType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RegistrationHandlerId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TokenUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UserInfoUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

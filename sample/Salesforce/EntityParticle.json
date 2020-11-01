@@ -1,0 +1,356 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com EntityParticle object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/EntityParticle"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/EntityParticle"
+      }
+    }
+  ],
+  "definitions": {
+    "EntityParticle": {
+      "title": "EntityParticle",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "ByteLength": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "DataType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DefaultValueFormula": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DeveloperName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Digits": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "DurableId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EntityDefinitionId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExtraTypeInfo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "FieldDefinitionId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "InlineHelpText": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsApiFilterable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsApiGroupable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsApiSortable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsAutonumber": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsCalculated": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsCaseSensitive": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsCompactLayoutable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsCreatable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDefaultedOnCreate": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDependentPicklist": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDeprecatedAndHidden": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDisplayLocationInDecimal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsEncrypted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFieldHistoryTracked": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsHighScaleNumber": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsHtmlFormatted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsIdLookup": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsLayoutable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsListVisible": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsNameField": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsNamePointing": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsNillable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsPermissionable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsUnique": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsUpdatable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsWorkflowFilterable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsWriteRequiresMasterRead": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Length": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "Mask": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MaskType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MasterLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NamespacePrefix": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Precision": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "QualifiedApiName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ReferenceTargetField": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RelationshipName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RelationshipOrder": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "Scale": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "ServiceDataTypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ValueTypeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

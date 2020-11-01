@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com EmailStatus object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/EmailStatus"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/EmailStatus"
+      }
+    }
+  ],
+  "definitions": {
+    "EmailStatus": {
+      "title": "EmailStatus",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EmailTemplateName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "FirstOpenDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastOpenDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TaskId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TimesOpened": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "WhoId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

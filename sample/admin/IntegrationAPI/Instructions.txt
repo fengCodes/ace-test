@@ -1,0 +1,153 @@
+Instructions for IntegrationAPI samples
+=======================================
+
+This directory contains 3 examples of using the Integration API to administer Integration Nodes
+
+CLASSPATH
+=========
+
+To run these samples you need to ensure that the following are included in your CLASSPATH:
+
+<ACE install dir>/common/classes/IntegrationAPI.jar
+<ACE install dir>/common/jackson/lib/jackson-annotations-2.10.0.jar
+<ACE install dir>/common/jackson/lib/jackson-core-2.10.0.jar
+<ACE install dir>/common/jackson/lib/jackson-databind-2.10.2.jar
+<ACE install dir>/common/jackson/lib/jackson-dataformat-yaml-2.10.0.jar
+<ACE install dir>/common/jackson/lib/snakeyaml-1.26.jar
+
+To access local integration nodes:
+<ACE install dir>/common/jnr/lib/jnr-a64asm-1.0.0.jar.
+<ACE install dir>/common/jnr/lib/jnr-constants-0.9.12.jar.
+<ACE install dir>/common/jnr/lib/jnr-enxio-0.21.jar.
+<ACE install dir>/common/jnr/lib/jnr-ffi-2.19.jar.
+<ACE install dir>/common/jnr/lib/jnr-posix-3.0.50.jar.
+<ACE install dir>/common/jnr/lib/jnr-unixsocket-0.23.jar.
+<ACE install dir>/common/jnr/lib/jnr-x86asm-1.0.2.jar.
+<ACE install dir>/common/jnr/lib/asm-7.0.jar.
+
+
+Sample Invocations
+==================
+
+1. IntegrationNodeInfo.java
+---------------------------
+Retrieves local or remote Integration Node information
+
+Sample remote Run: IntegrationNodeInfo localhost:4425
+Sample local Run: IntegrationNodeInfo node1
+Sample Output:
+Integration Node node1 is running 
+  Integration Server: server1 is running.
+    Application: JDBCApp is running.
+      Flow: Flow1 is running.
+    Application: server1_DefaultApplication is running.
+      Flow: myMessageFlow is running.
+    Application: HelloApp is running.
+      Flow: HelloFlow is running.
+    Application: AppWithKeywords is running.
+      Flow: FlowOne is running.
+    RestAPI:CustomerDatabaseV1 is running.
+
+
+
+2. IntegrationNodeOperations.java
+---------------------------------
+Retrieves local Integration Node information and stops and starts apps and flows
+Set integration node in code uses TESTNODE_<user> as the default local integration node
+
+Sample Run: IntegrationNodeOperations 
+Sample Output:
+**********************************************************
+* Use IntegrationNodeProxy and IntegrationServerProxy    *
+* to access the Integration Node and its servers         *
+* Create a server and get a model representation for it. *
+**********************************************************
+
+Creating Integration Server: server1 for Integration Node: node1
+
+Get a IntegrationServerModel representation of server1 from IntegrationServerProxy
+
+Details from last response message:
+===================================
+URL: /apiv2/servers/server1?depth=4
+Status Code: 200
+Reason: OK
+
+Attributes retrieved from the model representation of server1
+=============================================================
+Using ACE build level :  S000-Lyymmdd.xyz
+Using ACE version :  11.0.0.5
+
+
+**********************************************************
+* Use HttpClient to also access the node and its servers *
+**********************************************************
+
+Details from last response message:
+===================================
+URL: /apiv2/servers/server1?depth=4
+Status Code: 200
+Reason: OK
+
+==> the same details can be retrieved using IntegrationServerProxy or HttpClient
+
+Deploying sample.bar
+**********************************************************
+* Use these objects to access deployed resources         *
+* ApplicationProxy                                       *
+* SharedLibraryProxy                                     *
+**********************************************************
+
+Application: JDBCApp is running.
+Application: server1_DefaultApplication is running.
+Application: HelloApp is running.
+Application: AppWithKeywords is running.
+
+Found Shared Library: sharedlib
+Found Shared Library: mySharedLib
+
+**********************************************************
+* Stop/start Applications and Message Flows.             *
+**********************************************************
+
+Stopping Application HelloApp...
+==> rc = 200
+
+Refreshing Application Model
+==> Application: HelloApp is stopped.
+
+Starting Application HelloApp...
+==> rc = 200
+
+Refreshing Application Model
+==> Application: HelloApp is running.
+
+Stopping Message Flow HelloFlow...
+==> rc = 200
+
+Refreshing Message Flow Model
+==> Message Flow: HelloFlow is stopped.
+
+Starting Message Flow HelloFlow...
+==> rc = 200
+
+Refreshing Message Flow Model
+==> Message Flow: HelloFlow is running.
+Finished run
+
+
+
+3. DeployBAR.java
+-----------------
+Deploys a BAR file to a local or remote Integration Node
+
+Sample remote Run: DeployBAR localhost 4425 server1 /home/user/workspace/Sample/sample.bar
+Sample local Run:DeployBAR node1 server1 /home/user/workspace/Sample/sample.bar
+
+Sample Output:
+Connecting to the integration node running at localhost:4425...
+Discovering integration server 'server1'...
+Deploying /home/user/workspace/Sample/sample.bar...
+BIPMessage: 9332 FullText BIP9332I: Application 'AppWithKeywords' has been changed successfully. 
+BIPMessage: 9326 FullText BIP9326I: The source 'AppWithKeywords.bar' has been successfully deployed. 
+Deploy success = true

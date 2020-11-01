@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com CronTrigger object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/CronTrigger"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CronTrigger"
+      }
+    }
+  ],
+  "definitions": {
+    "CronTrigger": {
+      "title": "CronTrigger",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CronExpression": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CronJobDetailId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EndTime": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NextFireTime": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OwnerId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PreviousFireTime": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StartTime": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "State": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TimeZoneSidKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TimesTriggered": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

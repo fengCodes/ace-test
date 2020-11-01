@@ -1,0 +1,986 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com PermissionSetLicense object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/PermissionSetLicense"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PermissionSetLicense"
+      }
+    }
+  ],
+  "definitions": {
+    "PermissionSetLicense": {
+      "title": "PermissionSetLicense",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DeveloperName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExpirationDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Language": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MasterLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MaximumPermissionsActivateContract": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsActivateOrder": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsAllowEmailIC": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsAllowUniversalSearch": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsAllowViewKnowledge": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsApiEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsAssignPermissionSets": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsAssignTopics": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsAuthorApex": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsBulkApiHardDelete": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsBulkMacrosAllowed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCanInsertFeedSystemFields": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCanUseNewDashboardBuilder": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsChatterEditOwnPost": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsChatterEditOwnRecordPost": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsChatterFileLink": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsChatterForSharePoint": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsChatterInternalUser": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsChatterInviteExternalUsers": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsChatterOwnGroups": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsConfigCustomRecs": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsConnectOrgToEnvironmentHub": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsContentAdministrator": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsConvertLeads": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCreateCustomizeDashboards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCreateCustomizeFilters": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCreateCustomizeReports": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCreateDashboardFolders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCreatePackaging": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCreateReportFolders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCreateTopics": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCreateWorkspaces": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCustomMobileAppsAccess": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCustomSidebarOnAllPages": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsCustomizeApplication": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsDeleteActivatedContract": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsDeleteTopics": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsDistributeFromPersWksp": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditActivatedOrders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditBrandTemplates": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditCaseComments": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditEvent": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditHtmlTemplates": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditKnowledge": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditMyDashboards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditMyReports": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditOppLineItemUnitPrice": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditPublicDocuments": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditPublicTemplates": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditReadonlyFields": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditTask": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEditTopics": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEmailAdministration": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEmailMass": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEmailSingle": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEmailTemplateManagement": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsEnableNotifications": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsExportReport": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsFlowUFLRequired": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsForceTwoFactor": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsGovernNetworks": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsIdentityConnect": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsIdentityEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsImportLeads": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsImportPersonal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsInstallPackaging": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsLightningExperienceUser": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageAnalyticSnapshots": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageAuthProviders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageBusinessHourHolidays": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageCallCenters": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageCases": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageCategories": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageChatterMessages": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageContentPermissions": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageContentProperties": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageContentTypes": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageCustomPermissions": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageCustomReportTypes": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageDashbdsInPubFolders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageDataCategories": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageDataIntegrations": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageDynamicDashboards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageEmailClientConfig": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageEncryptionKeys": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageExchangeConfig": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageInteraction": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageInternalUsers": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageIpAddresses": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageKnowledge": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageKnowledgeImportExport": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageLeads": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageLoginAccessPolicies": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageMobile": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageNetworks": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManagePasswordPolicies": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageProfilesPermissionsets": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageRemoteAccess": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageReportsInPubFolders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageRoles": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageSearchPromotionRules": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageSharing": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageSolutions": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageSynonyms": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageTwoFactor": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageUnlistedGroups": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsManageUsers": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsMassInlineEdit": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsMergeTopics": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsModerateChatter": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsModifyAllData": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsModifySecureAgents": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsNewReportBuilder": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsPasswordNeverExpires": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsPublishPackaging": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsResetPasswords": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsRunFlow": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsRunReports": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsSalesConsole": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsScheduleReports": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsSelectFilesFromSalesforce": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsSendSitRequests": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsShareInternalArticles": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsSolutionImport": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsSubmitMacrosAllowed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsTransferAnyCase": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsTransferAnyEntity": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsTransferAnyLead": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsTwoFactorApi": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsUseTeamReassignWizards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsViewAllData": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsViewAllUsers": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsViewContent": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsViewDataCategories": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsViewEncryptedData": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsViewEventLogFiles": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsViewHelpLink": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsViewMyTeamsDashboards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsViewPublicDashboards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsViewPublicReports": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsViewSetup": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsWorkCalibrationUser": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaximumPermissionsWorkDotComUserPerm": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionSetLicenseKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TotalLicenses": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "UsedLicenses": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

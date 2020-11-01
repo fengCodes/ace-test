@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com ConnectedApplication object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/ConnectedApplication"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ConnectedApplication"
+      }
+    }
+  ],
+  "definitions": {
+    "ConnectedApplication": {
+      "title": "ConnectedApplication",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobileSessionTimeout": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobileStartUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OptionsAllowAdminApprovedUsersOnly": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OptionsHasSessionLevelPolicy": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OptionsRefreshTokenValidityMetric": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PinLength": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RefreshTokenValidityPeriod": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "StartUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

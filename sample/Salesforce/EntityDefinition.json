@@ -1,0 +1,266 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com EntityDefinition object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/EntityDefinition"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/EntityDefinition"
+      }
+    }
+  ],
+  "definitions": {
+    "EntityDefinition": {
+      "title": "EntityDefinition",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "DefaultCompactLayoutId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DetailUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DeveloperName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DurableId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EditDefinitionUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EditUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "HelpSettingPageName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "HelpSettingPageUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsApexTriggerable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsCompactLayoutable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsCustomSetting": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsCustomizable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDeprecatedAndHidden": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsEverCreatable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsEverDeletable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsEverUpdatable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFeedEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsIdEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsLayoutable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsQueryable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReplicateable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsRetrieveable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsSearchLayoutable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsSearchable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsTriggerable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsWorkflowEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "KeyPrefix": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MasterLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NamespacePrefix": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NewUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PluralLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PublisherId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "QualifiedApiName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RunningUserEntityAccessId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

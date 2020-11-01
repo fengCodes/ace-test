@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
+	xmlns:ibmDfdlExtn="http://www.ibm.com/dfdl/extensions"
+	xmlns:recSepFieldsFmt="http://www.ibm.com/dfdl/RecordSeparatedFieldFormat"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:import
+		namespace="http://www.ibm.com/dfdl/RecordSeparatedFieldFormat"
+		schemaLocation="IBMdefined/RecordSeparatedFieldFormat.xsd" />
+	<xsd:annotation>
+		<xsd:appinfo source="http://www.ogf.org/dfdl/">
+			<dfdl:format byteOrder="{$dfdl:byteOrder}" encoding="{$dfdl:encoding}" escapeSchemeRef="recSepFieldsFmt:RecordEscapeScheme" occursCountKind="fixed" ref="recSepFieldsFmt:RecordSeparatedFieldsFormat"/>
+		</xsd:appinfo>
+	</xsd:annotation>
+
+	<xsd:element name="OneString" type="xsd:string" ibmDfdlExtn:docRoot="true" 
+		dfdl:initiator="[" dfdl:terminator="]" />
+
+</xsd:schema>

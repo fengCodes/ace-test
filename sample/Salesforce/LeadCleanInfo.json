@@ -1,0 +1,571 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com LeadCleanInfo object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/LeadCleanInfo"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/LeadCleanInfo"
+      }
+    }
+  ],
+  "definitions": {
+    "LeadCleanInfo": {
+      "title": "LeadCleanInfo",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "Address": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AddressType"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "AnnualRevenue": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "City": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CleanedByJob": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "CleanedByUser": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "CompanyDunsNumber": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CompanyName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ContactStatusDataDotCom": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DandBCompanyDunsNumber": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DataDotComCompanyId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DataDotComId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "FirstName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "GeocodeAccuracy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Industry": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentAnnualRevenue": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentCity": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentCompanyDunsNumber": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentCompanyName": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentCountry": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentCountryCode": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentDandBCompanyDunsNumber": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentEmail": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentFirstName": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentIndustry": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentLastName": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentNumberOfEmployees": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentPhone": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentPostalCode": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentState": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentStateCode": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentStreet": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDifferentTitle": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFlaggedWrongAddress": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFlaggedWrongAnnualRevenue": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFlaggedWrongCompanyDunsNumber": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFlaggedWrongCompanyName": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFlaggedWrongEmail": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFlaggedWrongIndustry": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFlaggedWrongName": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFlaggedWrongNumberOfEmployees": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFlaggedWrongPhone": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsFlaggedWrongTitle": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsInactive": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReviewedAddress": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReviewedAnnualRevenue": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReviewedCompanyDunsNumber": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReviewedCompanyName": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReviewedDandBCompanyDunsNumber": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReviewedEmail": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReviewedIndustry": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReviewedName": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReviewedNumberOfEmployees": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReviewedPhone": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsReviewedTitle": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastMatchedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastStatusChangedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastStatusChangedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Latitude": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "LeadId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Longitude": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NumberOfEmployees": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "Phone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PostalCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "State": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Street": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "AddressType": {
+      "title": "AddressType",
+      "additionalProperties": false,
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "countryCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geocodeAccuracy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "postalCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "stateCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "street": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "latitude": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "longitude": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

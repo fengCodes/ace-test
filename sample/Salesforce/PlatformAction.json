@@ -1,0 +1,188 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com PlatformAction object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/PlatformAction"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PlatformAction"
+      }
+    }
+  ],
+  "definitions": {
+    "PlatformAction": {
+      "title": "PlatformAction",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "ActionListContext": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ActionTarget": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ActionTargetType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ApiName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Category": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ConfirmationMessage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DeviceFormat": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExternalId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "GroupId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IconContentType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IconHeight": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "IconUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IconWidth": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "InvocationStatus": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "InvokedByUserId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsGroupDefault": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PrimaryColor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RelatedSourceEntity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Section": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SourceEntity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Subtype": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

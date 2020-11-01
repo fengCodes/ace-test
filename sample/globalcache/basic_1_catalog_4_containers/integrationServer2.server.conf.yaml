@@ -1,0 +1,35 @@
+# Integration server configuration file for use as global cache container
+# Provides an equivalent to the "default" configuration in previous versions of IBM Integration Bus and Websphere Message Broker
+# Uses four integration servers where one is both a catalog server and a container server, and the other three are container servers
+#
+# General notes :
+#  - Integration Server will load server.conf.yaml from directory set via --work-dir
+#  - To ensure valid YAML avoid any use of TAB characters
+#  - File paths may be taken as absolute, or relative to the integration server's work directory
+#
+
+  GlobalCache:
+    cacheOn: true                                   # Set to true to enable Global Cache functionality
+                                                    # When using Global Cache it is advisable to change your jvmMinHeapSize and jvmMaxHeapSize depending on 
+                                                    # the number of live objects in the heap, complexity of live objects in the heap and number of available cores.
+                                                    # see https://www.ibm.com/support/knowledgecenter/SSTVLU_8.6.0/com.ibm.websphere.extremescale.doc/cxsjvmtune.html 
+    cacheServerName: 'MyContainerServer2'           # The name of this cache server component (a cache server component can be a catalog and/or a container); it must be unique in your global cache system
+    catalogServiceEndPoints: 'localhost:2800'       # Comma-separated list of hostnames and ports for the catalog servers to use, e.g. 'localhost:2800'
+    catalogDomainName: 'WMB_MyCacheDomain'          # Name of the shared global cache domain; this value should be shared by all catalog servers in the same domain
+    catalogClusterEndPoints: 'MyCatalogServer1:localhost:2803:2801'
+                                                    # Comma-separated list of catalog server connection details in the format 'cacheServerName:catalogCacheServerHost:HAPort:clientPort'
+                                                    # If this is a catalog server, cacheServerName should match the value above, and if not, it will be the value used on the integration server hosting it
+                                                    # The list should be in the same order for all catalog and container servers which are interacting together in the same domain
+    enableCatalogService: false                     # Set to true to launch a catalog service cache server component in this integration server
+    enableContainerService: true                    # Set to true to launch a container service cache server component in this integration server
+    enableJMX: true                                 # Allow admin access to this container service via JMX 
+    listenerHost: 'localhost'                       # Comma-separated list of hostnames for this cacheServer component, e.g. 'localhost,myserver.mycompany.com'
+    listenerPort: 2804                              # Port number this cache server listens on; it must be unique on this machine
+                                                    # Four consecutive ports are assigned, e.g. 2804 for catalogCacheServerListenerPort, 2805 for clientPort, 2806 for JMXServicePort, 2807 for HAPort
+
+    #deploymentPolicyCustomFile: ''                 # Override the deployment policy file (default is <install directory>/server/cachesupport/config/deployment.xml)
+    #objectGridCustomFile: ''                       # Override the ObjectGrid file (default is <install directory>/server/cachesupport/config/objectgrid_xio.xml)
+    #overrideTraceSpec: ''                          # Set a trace level for the cache server components, e.g. ObjectGrid*=event=enabled   
+    #clientsDefaultToSSL: false                     # Set to true to enable SSL for any client connections to the cache servers
+    #sslAlias: ''                                   # SSL Alias to use for the cache server component
+    #sslProtocol: ''                                # SSL Protocol to use for SSL connections eg. default is "TLSv1.2"

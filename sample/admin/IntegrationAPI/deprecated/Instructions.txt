@@ -1,0 +1,60 @@
+Instructions for deprecated Admin API/ CMP/ BrokerProxy 
+=======================================================
+
+The deprecated Admin API/ CMP/ Broker Proxy has been replaced by the IntegrationAPI set of classes (com.ibm.integration.admin.*) 
+
+This directory contains 2 examples of using the deprecated BrokerProxy against the new ACE v11 integration node
+
+
+Sample Invocations
+==================
+
+IntegrationNodeInfo
+-------------------
+
+Sample Run: `IntegrationNodeInfo localhost:4425`
+
+Sample Output:
+Integration Node Running node1
+Execution Group Running server1
+Application Running JDBCApp
+Application Running server1_DefaultApplication
+Application Running HelloApp
+Application Running AppWithKeywords
+RestAPI Running CustomerDatabaseV1
+Flow Running myMessageFlow
+
+
+DeployBAR
+---------
+
+Sample Run: `DeployBAR localhost 4425 server1 /home/user/workspace/AppWithKeywords.bar`
+
+Sample Output:
+Connecting to the integration node running at localhost:4425...
+Discovering integration server 'server1'...
+Deploying /home/user/workspace/AppWithKeywords.bar...
+Result = success
+
+
+CLASSPATH
+=========
+
+To run these samples you need to ensure that the following are included in your CLASSPATH:
+
+<ACE install dir>/common/classes/IntegrationAPI.jar
+<ACE install dir>/common/jackson/lib/jackson-annotations-2.10.0.jar
+<ACE install dir>/common/jackson/lib/jackson-core-2.10.0.jar
+<ACE install dir>/common/jackson/lib/jackson-databind-2.10.0.jar
+<ACE install dir>/common/jackson/lib/jackson-dataformat-yaml-2.10.0.jar
+<ACE install dir>/common/jackson/lib/snakeyaml-1.26.jar
+
+To access local integration nodes:
+<ACE install dir>/common/jnr/lib/jnr-a64asm-1.0.0.jar.
+<ACE install dir>/common/jnr/lib/jnr-constants-0.9.12.jar.
+<ACE install dir>/common/jnr/lib/jnr-enxio-0.21.jar.
+<ACE install dir>/common/jnr/lib/jnr-ffi-2.19.jar.
+<ACE install dir>/common/jnr/lib/jnr-posix-3.0.50.jar.
+<ACE install dir>/common/jnr/lib/jnr-unixsocket-0.23.jar.
+<ACE install dir>/common/jnr/lib/jnr-x86asm-1.0.2.jar.
+<ACE install dir>/common/jnr/lib/asm-7.0.jar.

@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com FiscalYearSettings object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/FiscalYearSettings"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FiscalYearSettings"
+      }
+    }
+  ],
+  "definitions": {
+    "FiscalYearSettings": {
+      "title": "FiscalYearSettings",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EndDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsStandardYear": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PeriodId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PeriodLabelScheme": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PeriodPrefix": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "QuarterLabelScheme": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "QuarterPrefix": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StartDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "WeekLabelScheme": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "WeekStartDay": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "YearType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com Holiday object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Holiday"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Holiday"
+      }
+    }
+  ],
+  "definitions": {
+    "Holiday": {
+      "title": "Holiday",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "ActivityDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EndTimeInMinutes": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "IsAllDay": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsRecurrence": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RecurrenceDayOfMonth": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "RecurrenceDayOfWeekMask": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "RecurrenceEndDateOnly": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RecurrenceInstance": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RecurrenceInterval": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "RecurrenceMonthOfYear": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RecurrenceStartDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RecurrenceType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StartTimeInMinutes": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

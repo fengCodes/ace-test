@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com OpportunityHistory object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/OpportunityHistory"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/OpportunityHistory"
+      }
+    }
+  ],
+  "definitions": {
+    "OpportunityHistory": {
+      "title": "OpportunityHistory",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "Amount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CloseDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExpectedRevenue": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ForecastCategory": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OpportunityId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Probability": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "StageName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

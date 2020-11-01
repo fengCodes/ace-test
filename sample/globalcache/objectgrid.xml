@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objectGridConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://ibm.com/ws/objectgrid/config ../objectGrid.xsd" 
+  xmlns="http://ibm.com/ws/objectgrid/config"> 
+ <objectGrids>
+  <objectGrid name="WMB">
+   <backingMap name="USER.OPTIMISTIC.*" template="true" timeToLive="0" ttlEvictorType="LAST_UPDATE_TIME" lockStrategy="OPTIMISTIC_NO_VERSIONING" nearCacheInvalidationEnabled="true" copyMode="COPY_TO_BYTES"/>
+   <backingMap name="USER.PESSIMISTIC.*" template="true" timeToLive="0" ttlEvictorType="LAST_UPDATE_TIME" lockStrategy="PESSIMISTIC" copyMode="COPY_TO_BYTES"/>
+   <backingMap name="USER.NONE.*" template="true" timeToLive="0" ttlEvictorType="LAST_UPDATE_TIME" lockStrategy="NONE" nearCacheInvalidationEnabled="true" copyMode="COPY_TO_BYTES"/>
+   <backingMap name="SYSTEM.BROKER.*" template="true" timeToLive="0" ttlEvictorType="LAST_UPDATE_TIME" lockStrategy="PESSIMISTIC" copyMode="COPY_TO_BYTES"/>
+  </objectGrid>
+ </objectGrids>
+</objectGridConfig>

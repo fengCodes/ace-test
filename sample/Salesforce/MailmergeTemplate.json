@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com MailmergeTemplate object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/MailmergeTemplate"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/MailmergeTemplate"
+      }
+    }
+  ],
+  "definitions": {
+    "MailmergeTemplate": {
+      "title": "MailmergeTemplate",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "Body": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "byte"
+        },
+        "BodyLength": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Filename": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastUsedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SecurityOptionsAttachmentHasFlash": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "SecurityOptionsAttachmentHasXSSThreat": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "SecurityOptionsAttachmentScannedForXSS": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "SecurityOptionsAttachmentScannedforFlash": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

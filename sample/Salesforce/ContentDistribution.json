@@ -1,0 +1,194 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com ContentDistribution object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/ContentDistribution"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ContentDistribution"
+      }
+    }
+  ],
+  "definitions": {
+    "ContentDistribution": {
+      "title": "ContentDistribution",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "ContentDocumentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ContentVersionId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DistributionPublicUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExpiryDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "FirstViewDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastViewDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OwnerId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Password": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PreferencesAllowOriginalDownload": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PreferencesAllowPDFDownload": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PreferencesAllowViewInBrowser": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PreferencesExpires": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PreferencesLinkLatestVersion": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PreferencesNotifyOnVisit": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PreferencesNotifyRndtnComplete": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PreferencesPasswordRequired": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "RelatedRecordId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ViewCount": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

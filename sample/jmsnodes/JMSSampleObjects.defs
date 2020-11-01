@@ -1,0 +1,18 @@
+# Define a QueueConnectionFactory
+# Only parameters being overridden from their default values are specified.
+# This sets up a MQ client binding.
+DEF QCF(qcf1) +
+TRANSPORT(CLIENT) +
+QMANAGER(WBRK6_DEFAULT_QUEUE_MANAGER) +
+PORT(2414)
+
+# Define Queue Destinations
+DEF Q(inputqueue) +
+QUEUE(inputqueue) +
+QMANAGER(WBRK6_DEFAULT_QUEUE_MANAGER)
+#
+DEF Q(publishqueue) +
+QUEUE(publishqueue) +
+QMANAGER(WBRK6_DEFAULT_QUEUE_MANAGER)
+
+END

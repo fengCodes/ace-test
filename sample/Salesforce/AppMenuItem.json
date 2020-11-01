@@ -1,0 +1,266 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com AppMenuItem object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/AppMenuItem"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AppMenuItem"
+      }
+    }
+  ],
+  "definitions": {
+    "AppMenuItem": {
+      "title": "AppMenuItem",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "ApplicationId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CanvasAccessMethod": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CanvasEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "CanvasOptions": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CanvasReferenceId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CanvasSelectedLocations": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CanvasUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IconUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "InfoUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsAccessible": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsRegisteredDeviceOnly": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsUsingAdminAuthorization": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsVisible": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LogoUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobileAppBinaryId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobileAppInstallUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobileAppInstalledDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobileAppInstalledVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobileAppVer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobileDeviceType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobileMinOsVer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobilePlatform": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MobileStartUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NamespacePrefix": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SortOrder": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "StartUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UserSortOrder": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

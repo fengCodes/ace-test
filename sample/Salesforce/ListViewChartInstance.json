@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com ListViewChartInstance object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/ListViewChartInstance"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ListViewChartInstance"
+      }
+    }
+  ],
+  "definitions": {
+    "ListViewChartInstance": {
+      "title": "ListViewChartInstance",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "AggregateField": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AggregateType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ChartType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DataQuery": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DeveloperName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExternalId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "GroupingField": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeletable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsEditable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsLastViewed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ListViewChartId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ListViewContextId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SourceEntity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

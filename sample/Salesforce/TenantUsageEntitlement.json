@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com TenantUsageEntitlement object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/TenantUsageEntitlement"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/TenantUsageEntitlement"
+      }
+    }
+  ],
+  "definitions": {
+    "TenantUsageEntitlement": {
+      "title": "TenantUsageEntitlement",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "AmountUsed": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CurrentAmountAllowed": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "EndDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Frequency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "HasRollover": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsPersistentResource": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MasterLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OverageGrace": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ResourceGroupKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Setting": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StartDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UsageDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

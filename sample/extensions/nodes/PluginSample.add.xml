@@ -1,0 +1,7 @@
+<Request type='add'>
+<CustomerType>2</CustomerType>
+<CustomerAccount>01234567</CustomerAccount>
+<CustomerName>Mr J.Smith</CustomerName>
+<CustomerPhone>555-1234</CustomerPhone>
+<CustomerAddress>15, High Street, Anytown</CustomerAddress>
+</Request>

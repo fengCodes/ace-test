@@ -1,0 +1,974 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com PermissionSet object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/PermissionSet"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PermissionSet"
+      }
+    }
+  ],
+  "definitions": {
+    "PermissionSet": {
+      "title": "PermissionSet",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsOwnedByProfile": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NamespacePrefix": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PermissionsActivateContract": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsActivateOrder": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsAllowEmailIC": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsAllowUniversalSearch": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsAllowViewKnowledge": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsApiEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsAssignPermissionSets": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsAssignTopics": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsAuthorApex": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsBulkApiHardDelete": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsBulkMacrosAllowed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCanInsertFeedSystemFields": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCanUseNewDashboardBuilder": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsChatterEditOwnPost": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsChatterEditOwnRecordPost": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsChatterFileLink": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsChatterForSharePoint": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsChatterInternalUser": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsChatterInviteExternalUsers": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsChatterOwnGroups": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsConfigCustomRecs": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsConnectOrgToEnvironmentHub": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsContentAdministrator": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsConvertLeads": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCreateCustomizeDashboards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCreateCustomizeFilters": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCreateCustomizeReports": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCreateDashboardFolders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCreatePackaging": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCreateReportFolders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCreateTopics": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCreateWorkspaces": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCustomMobileAppsAccess": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCustomSidebarOnAllPages": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsCustomizeApplication": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsDeleteActivatedContract": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsDeleteTopics": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsDistributeFromPersWksp": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditActivatedOrders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditBrandTemplates": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditCaseComments": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditEvent": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditHtmlTemplates": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditKnowledge": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditMyDashboards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditMyReports": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditOppLineItemUnitPrice": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditPublicDocuments": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditPublicTemplates": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditReadonlyFields": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditTask": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEditTopics": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEmailAdministration": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEmailMass": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEmailSingle": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEmailTemplateManagement": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEnableNotifications": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsExportReport": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsFlowUFLRequired": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsForceTwoFactor": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsGovernNetworks": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsIdentityConnect": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsIdentityEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsImportLeads": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsImportPersonal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsInstallPackaging": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsLightningExperienceUser": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageAnalyticSnapshots": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageAuthProviders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageBusinessHourHolidays": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageCallCenters": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageCases": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageCategories": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageChatterMessages": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageContentPermissions": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageContentProperties": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageContentTypes": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageCustomPermissions": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageCustomReportTypes": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageDashbdsInPubFolders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageDataCategories": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageDataIntegrations": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageDynamicDashboards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageEmailClientConfig": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageEncryptionKeys": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageExchangeConfig": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageInteraction": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageInternalUsers": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageIpAddresses": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageKnowledge": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageKnowledgeImportExport": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageLeads": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageLoginAccessPolicies": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageMobile": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageNetworks": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManagePasswordPolicies": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageProfilesPermissionsets": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageRemoteAccess": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageReportsInPubFolders": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageRoles": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageSearchPromotionRules": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageSharing": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageSolutions": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageSynonyms": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageTwoFactor": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageUnlistedGroups": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsManageUsers": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsMassInlineEdit": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsMergeTopics": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsModerateChatter": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsModifyAllData": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsModifySecureAgents": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsNewReportBuilder": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsPasswordNeverExpires": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsPublishPackaging": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsResetPasswords": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsRunFlow": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsRunReports": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsSalesConsole": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsScheduleReports": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsSelectFilesFromSalesforce": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsSendSitRequests": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsShareInternalArticles": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsSolutionImport": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsSubmitMacrosAllowed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsTransferAnyCase": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsTransferAnyEntity": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsTransferAnyLead": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsTwoFactorApi": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsUseTeamReassignWizards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewAllData": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewAllUsers": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewContent": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewDataCategories": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewEncryptedData": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewEventLogFiles": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewHelpLink": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewMyTeamsDashboards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewPublicDashboards": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewPublicReports": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewSetup": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsWorkCalibrationUser": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsWorkDotComUserPerm": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ProfileId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UserLicenseId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

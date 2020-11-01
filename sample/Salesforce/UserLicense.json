@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com UserLicense object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/UserLicense"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UserLicense"
+      }
+    }
+  ],
+  "definitions": {
+    "UserLicense": {
+      "title": "UserLicense",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "LicenseDefinitionKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MonthlyLoginsEntitlement": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "MonthlyLoginsUsed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

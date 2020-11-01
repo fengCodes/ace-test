@@ -1,0 +1,63 @@
+<Company>
+    <CompanyName>My Company</CompanyName>
+    <Employee>
+        <EmpNo>111111</EmpNo>
+        <Dept>500</Dept>
+        <EmpName>Alice Wong</EmpName>
+        <Address>
+            <StreetName>8200 Warden Ave</StreetName>
+            <City>Markham, Ont</City>
+            <ZipCode>L3G 1H7</ZipCode>
+        </Address>
+        <Tel>905-347-5649</Tel>
+        <Salary>135599.95</Salary>
+    </Employee>
+    <Employee>
+        <EmpNo>222222</EmpNo>
+        <Dept>500</Dept>
+        <EmpName>James May</EmpName>
+        <Address>
+            <StreetName>23 The Cuttings</StreetName>
+            <City>Chatham</City>
+            <ZipCode>CH2 2PR</ZipCode>
+        </Address>
+        <Tel>208-203-1332</Tel>
+        <Salary>189599.95</Salary>
+    </Employee>
+    <Employee>
+        <EmpNo>333333</EmpNo>
+        <Dept>310</Dept>
+        <EmpName>Richard Hammond</EmpName>
+        <Address>
+            <StreetName>16 Great Windmill</StreetName>
+            <City>London</City>
+            <ZipCode>W2 3RJ</ZipCode>
+        </Address>
+        <Tel>207-445-2955</Tel>
+        <Salary>599.95</Salary>
+    </Employee>
+    <Employee>
+        <EmpNo>444444</EmpNo>
+        <Dept>230</Dept>
+        <EmpName>Jeremy Clarkeson</EmpName>
+        <Address>
+            <StreetName>Rose Cottage, Pea Dr</StreetName>
+            <City>Gloucester</City>
+            <ZipCode>GL01 2NM</ZipCode>
+        </Address>
+        <Tel>743-123-4567</Tel>
+        <Salary>75599.95</Salary>
+    </Employee>
+    <Employee>
+        <EmpNo>555555</EmpNo>
+        <Dept xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Dept>
+        <EmpName>Humphrey Littleton</EmpName>
+        <Address>
+            <StreetName>416 Regent Street</StreetName>
+            <City>London</City>
+            <ZipCode>NW1 1QT</ZipCode>
+        </Address>
+        <Tel>207-883-1238</Tel>
+        <Salary>99999.95</Salary>
+    </Employee>
+</Company>

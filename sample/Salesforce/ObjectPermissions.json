@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com ObjectPermissions object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/ObjectPermissions"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ObjectPermissions"
+      }
+    }
+  ],
+  "definitions": {
+    "ObjectPermissions": {
+      "title": "ObjectPermissions",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ParentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PermissionsCreate": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsDelete": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsEdit": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsModifyAllRecords": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsRead": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "PermissionsViewAllRecords": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "SobjectType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

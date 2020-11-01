@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com UserRecordAccess object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/UserRecordAccess"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UserRecordAccess"
+      }
+    }
+  ],
+  "definitions": {
+    "UserRecordAccess": {
+      "title": "UserRecordAccess",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "HasAllAccess": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "HasDeleteAccess": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "HasEditAccess": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "HasReadAccess": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "HasTransferAccess": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MaxAccessLevel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RecordId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "UserId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

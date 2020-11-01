@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com AssetFeed object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/AssetFeed"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AssetFeed"
+      }
+    }
+  ],
+  "definitions": {
+    "AssetFeed": {
+      "title": "AssetFeed",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "Body": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CommentCount": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "ContentData": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "byte"
+        },
+        "ContentDescription": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ContentFileName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ContentSize": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "ContentType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "InsertedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsRichText": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LikeCount": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "LinkUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ParentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RelatedRecordId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

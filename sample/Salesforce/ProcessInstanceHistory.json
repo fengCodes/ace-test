@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com ProcessInstanceHistory object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/ProcessInstanceHistory"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ProcessInstanceHistory"
+      }
+    }
+  ],
+  "definitions": {
+    "ProcessInstanceHistory": {
+      "title": "ProcessInstanceHistory",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "ActorId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Comments": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ElapsedTimeInDays": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ElapsedTimeInHours": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ElapsedTimeInMinutes": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsPending": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "OriginalActorId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ProcessInstanceId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ProcessNodeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RemindersSent": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "StepStatus": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TargetObjectId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

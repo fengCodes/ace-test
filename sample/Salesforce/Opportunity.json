@@ -1,0 +1,284 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com Opportunity object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Opportunity"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Opportunity"
+      }
+    }
+  ],
+  "definitions": {
+    "Opportunity": {
+      "title": "Opportunity",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "AccountId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Amount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CampaignId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CloseDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CurrentGenerators__c": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DeliveryInstallationStatus__c": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExpectedRevenue": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Fiscal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "FiscalQuarter": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "FiscalYear": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "ForecastCategory": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ForecastCategoryName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "HasOpenActivity": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "HasOpportunityLineItem": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "HasOverdueTask": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsClosed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsDeleted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsPrivate": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsWon": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastActivityDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastReferencedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastViewedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LeadSource": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MainCompetitors__c": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NextStep": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OrderNumber__c": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OwnerId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Pricebook2Id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Probability": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "StageName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TotalOpportunityQuantity": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "TrackingNumber__c": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

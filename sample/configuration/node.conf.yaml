@@ -1,0 +1,284 @@
+---
+# ACE Integration Node configuration file
+#
+# General notes :
+#  - Integration Node will load node.conf.yaml from directory named after the Integration Node
+#    in the components directory in the workpath:
+#    <workpath> eg: /var/mqsi/
+#     /components
+#      /<node-name>
+#       node.conf.yaml
+#  - To ensure valid YAML avoid any use of TAB characters
+#  - File paths may be taken as absolute, or relative to the integration server's work directory
+#
+# WARNING: Any value specified in the 'overrides/node.conf.yaml' will override values here
+#
+nodeConfVersion: 1
+
+#lilPath: ''                 # A list of paths from where User-defined node LIL/JAR files are loaded. (multiple directories are separated by platform path separator)
+
+#deployMode: 'replace'       # Deploy mode: replace | none | manual
+#scanForKeywords: ''         # A comma-delimited list of file types, selected from
+                             # [esql, xsl, xslt], to scan for keywords.
+
+#defaultQueueManager: ''     # Set non-empty string to specify a default queue manager
+#mqTrustedQueueManager: 'no' # Set to yes to enable MQ communication as a trusted (fastpath) application
+
+#agentTrace: 'none'          # choose 1 of : none|debug|diagnostic
+#agentTraceSize: '1G'        # Set the service trace size
+
+#defaultConfigurationTimeout: '300'           # Default timeout on configuration requests
+
+Log:
+  #elkLog: false             # Control the publication of BIP messages to an ELK (Elasticsearch, Logstash, Kibana) stack. Set to true or false, default is false.
+  #elkConnections: ''        # Name of the ELK connection to use, for example 'elkConnection1'
+                             # Each named ELK Connection must be defined in the ELKConnections section below.
+
+AdminLog:
+  #enabled: true               # Control logging admin log messages. Set to true or false, default is true.
+  # When enabled the maximum amount of disk space required for admin log files is
+  # fileLogRetentionPeriod * fileLogCountDaily * fileLogSize * (1 + number of integration servers managed by the integration node)
+  #fileLog: false              # Control writing admin log messages to file. Set to true or false, default is false.
+  #fileLogRetentionPeriod: 30  # Sets the number of days to record admin log.
+                              # After this, old files are deleted as new ones are created. Default is 30 days.
+  #fileLogCountDaily: 10       # Maximum number of admin log files to write per day, default is 10 per day.
+  #fileLogSize: 100            # Maximum size in MB for each admin log file. Maximum size is 2000MB, default size is 100MB.
+
+RestAdminListener:
+  port: 4414                                  # Set the Admin REST API Port for ACE Web UI and Toolkit. Defaults to 4414
+
+  # Note the Admin REST API will be insecure without the following being set
+  #host: 'localhost'                          # Set the hostname otherwise we bind to the unspecified address
+
+  # SSL Server auth
+  #sslCertificate: '/path/to/serverPKCS.p12'  # See comment below
+  #sslPassword: 'adminRestApi::sslpwd'        # See comment below
+
+  #antiClickJackingOption: 'SAMEORIGIN'      # Set the value of the X-Frame-Origin header sent by the web user interface. The default is 'SAMEORIGIN' for security. Set to '' to disable the X-Frame-Origin header.
+
+  # If using a pem certificate:
+    # sslCertificate is the full path to the server certificate key
+    # sslPassword is the full path to the server private key, which must be a standard private key and not an encrypted one
+    # The file names must end with '.pem'
+  # If using p12/pfx certificate:
+    # sslCertificate is the full path to the server certificate store file
+    # sslPassword is the passphrase or alias to the passphrase of the certificate store
+
+  # SSL Client auth
+  #requireClientCert: true                    # Request a certificate from the client
+  #caPath: '/path/to/CA/certificates'         # CA certs, all files at this path will be read
+
+  # Admin Security
+  #  Authentication
+  #  If basicAuth enabled, a maximum of authMaxAttempts authentication attempts are allowed for a client within period authAttemptsDuration
+  #  If authMaxAttempts is reached without success, the client is locked out for period authBlockedDuration
+  #basicAuth: false                                                   # Clients web user name and password will be authenticated when set true
+  #authMaxAttempts: 5                                                 # Max allowed authentication attempts
+  #authAttemptsDuration: 300                                          # Authentication attempts period in seconds
+  #authBlockedDuration: 300                                           # Authentication blocked period in seconds
+  #sessionTimeout: 86400                                              # Set the timeout in seconds that REST API/Web UI sessions can be inactive before becoming invalid. Default is 86400 seconds (24 hours).
+  #ldapUrl: ldap[s]://server[:port]/baseDN[?[uid_attr][?[base|sub]]]  # ldap authentication url
+  #ldapBindDn: ldap::adminAuthentication                              # Resource alias or full bind dn
+  #ldapBindPassword: ldap::adminAuthentication                        # Resource alias or bind password
+  #  Authorization
+  #authorizationEnabled: false     # Clients web user role will be authorized when set true
+  #authorizationMode: 'file'       # Set authorization mode. Choose 1 of : ldap, file or mq
+  #ldapAuthorizeUrl: ldap[s]://server[:port]/baseDN[?[attr_name][?[base|sub]][?filter_expr]]  # ldap authorization url
+
+Security:
+  LdapAuthorizeAttributeToRoleMap:
+    # When 'authorizationMode' is ldap, set the mapping from a matched LDAP authorization attribute, as
+    # configured in 'ldapAuthorizeUrl' to the ACE web user role name
+    # e.g. map the following LDAP group DNs to web user roles 'adminRole', 'viewRole'
+    #'cn=admins,cn=group,ou=ace': 'adminRole'
+    #'cn=monitors,cn=group,ou=ace': 'viewRole'
+  Node:
+    Permissions:
+      # Set Admin Security Authorization file permissions for the Integration Node by web user role using 'read+:write+:execute+' , or 'all+'
+      # '+' grants permission, '-' denies permission
+      # e.g. define the following web user roles 'viewRole' and 'adminRole'
+      #viewRole:  'read+:write-:execute-'
+      #adminRole: 'all+'
+    DataPermissions:
+      # Set Admin Security Authorization file permissions for Record and Replay web user roles using 'read+:write+:execute+' , or 'all+'
+      # '+' grants permission, '-' denies permission. Record and Replay roles also require 'read+' permission to be defined for the
+      # Integration Node in the Permissions section above.
+      # e.g. define the following web user roles 'dataViewer', 'dataReplayer' and 'adminRole'
+      #dataViewer:  'read+:write-:execute-'
+      #dataReplayer: 'read+:write-:execute-'
+      #adminRole: 'all+'
+  Server:
+    # Set Admin Security Authorization file permissions for each named Integration Server
+    # e.g. define the following web user roles 'viewRole' and 'adminRole' for Integration Server 'server01'
+    #server01:
+      #Permissions:
+        #viewRole:  'read+:write-:execute-'
+        #adminRole: 'all+'
+      #DataPermissions:
+        # Set Admin Security Authorization file permissions for Record and Replay web user role using 'read+:write+:execute+' , or 'all+'
+        # '+' grants permission, '-' denies permission.
+        # e.g. define the following web user roles 'dataViewer', 'dataReplayer' and 'adminRole'
+        #dataViewer:  'read+:write-:execute-'
+        #dataReplayer: 'read+:write-:execute+'
+        #adminRole: 'all+'
+
+BrokerRegistry:
+  #brokerKeystoreType: 'JKS'                          # Key store type
+  #brokerKeystoreFile: ''                             # Location of the broker key store
+  #brokerKeystorePass: 'brokerKeystore::password'     # Resource alias containing the key store password
+  #brokerTruststoreType: 'JKS'                        # Trust store type
+  #brokerTruststoreFile: ''                           # Location of the broker trust store
+  #brokerTruststorePass: 'brokerTruststore::password' # Resource alias containing the trust store password
+  #brokerCRLFileList: ''
+  #brokerEnableCRLDP: ''
+  #allowSSLv3: ''
+  #allowSNI: ''
+  #reenableTransportAlgorithms: ''
+  #reenableCertificateAlgorithms: ''
+  #mqCCDT: ''
+  #httpConnectorPortRange: ''
+  #httpsConnectorPortRange: ''
+  #brokerKerberosConfigFile: ''
+  #brokerKerberosKeytabFile: ''
+  #mqKeyRepository: ''
+
+MQTTServer:
+  #enabled: true                              # Enables the MQTT server
+  #port: 11883                                # Sets the port for the MQTT server
+
+NodeHttpListener:
+  #startListener: true                   # Enables the Integration Node listener
+  #trace: 'none'                         # choose 1 of : none|service|diagnostic
+  #traceSize: '1G'                       # Set the service trace size
+
+  HTTPConnector:
+    ListenerPort: 7080            # Set non-zero to set a specific port, defaults to 7080
+    #ListenerAddress: '0.0.0.0'   # Set the IP address for the listener to listen on. Default is to listen on all addresses
+    #AutoRespondToHTTPHEADRequests: false # Automatically respond to HTTP HEAD requests without invoking the message flow. Set to true or false, default is false.
+    #ServerName: ''               # Set the value to be returned in the 'Server' HTTP header.
+    #CORSEnabled: false           # Set the value to true to make the listener respond to valid HTTP CORS requests
+    #CORSAllowOrigins: '*'
+    #CORSAllowCredentials: false
+    #CORSExposeHeaders: 'Content-Type'
+    #CORSMaxAge: -1
+    #CORSAllowMethods: 'GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS'
+    #CORSAllowHeaders: 'Accept,Accept-Language,Content-Language,Content-Type'
+
+  HTTPSConnector:
+    ListenerPort: 7083               # Set non-zero to set a specific port, defaults to 7083
+    #ListenerAddress: '0.0.0.0'      # Set the IP address for the listener to listen on. Default is to listen on all addresses
+    #ReqClientAuth: true
+    #KeyAlias: ''
+    #KeyPassword: 'P4s5w0rd'         # Set the password or alias to the password of the key
+    #KeystoreFile: '/path/to/keystore.jks'
+    #KeystorePassword: 'P4s5w0rd'    # Set the password or alias to the password of the keystore
+    #KeystoreType: 'JKS'             # Set the keystore type, can be 'JKS' or 'P12'. Default is JKS.
+    #TruststoreFile: /path/tp/truststore.jks
+    #TruststorePassword: 'P4s5w0rd'  # Set the password or alias to the password of the keystore
+    #TruststoreType: 'JKS'           # Set the truststore type, can be 'JKS' or 'PEM'. Default is JKS.
+    #CipherSpec: ''                  # Comma-separated list of allowable ciphers. IANA cipher names are accepted.
+                                     # Example: 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384'.
+    #AutoRespondToHTTPHEADRequests: false # Automatically respond to HTTP HEAD requests without invoking the message flow. Set to true or false, default is false.
+    #ServerName: ''                  # Set the value to be returned in the 'Server' HTTP header.
+    #CORSEnabled: false              # Set the value to true to make the listener respond to valid HTTP CORS requests
+    #CORSAllowOrigins: '*'
+    #CORSAllowCredentials: false
+    #CORSExposeHeaders: 'Content-Type'
+    #CORSMaxAge: -1
+    #CORSAllowMethods: 'GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS'
+    #CORSAllowHeaders: 'Accept,Accept-Language,Content-Language,Content-Type'
+
+Events:
+  OperationalEvents: # Message flow and Resource statistics plus Workload management
+    MQ:
+      #policy: ''               # Specify a {policy project}:policy if not using  'defaultQueueManager'
+      enabled: true             # Set true or false, default false
+      #format: ''               # Set string or none
+      #publishRetryInterval: 0  #Set the retry interval (in milliseconds), to pause all publications and retry, when publication failures are causing serious delay to the transaction.
+    MQTT:
+      #policy: ''               # Specify a {policy project}:policy if not using  'default MQTTServer'
+      enabled: true             # Set true or false, default false
+      #format: ''               # Set string or none
+      #publishRetryInterval: 0  #Set the retry interval (in milliseconds), to pause all publications and retry, when publication failures are causing serious delay to the transaction.
+  BusinessEvents: # Business monitoring events
+    MQ:
+      #policy: ''               # Specify a {policy project}:policy if not using  'defaultQueueManager'
+      enabled: true             # Set true or false, default false
+      #format: ''               # Set string or none
+      #publishRetryInterval: 0  #Set the retry interval (in milliseconds), to pause all publications and retry, when publication failures are causing serious delay to the transaction.
+    MQTT:
+      #policy: ''               # Specify a {policy project}:policy if not using  'default MQTTServer'
+      enabled: true             # Set true or false, default false
+      #format: ''               # Set string or none
+      #publishRetryInterval: 0  #Set the retry interval (in milliseconds), to pause all publications and retry, when publication failures are causing serious delay to the transaction.
+
+Monitoring:
+  MessageFlow:
+    #publicationOn: 'inactive'           # choose 1 of : active|inactive, default inactive
+                                         # Ensure Events.BusinessEvents.MQ|MQTT is set
+    #eventFormat: 'MonitoringEventV2'    # choose 1 of : MonitoringEventV2|WMB
+
+Statistics:
+  # Application message flows will by default inherit Snapshot and Archive values set here
+  Snapshot:
+    #publicationOn: 'inactive'   # choose 1 of : active|inactive, default inactive
+                                 # Ensure Events.OperationalEvents.MQ|MQTT is set for outputFormat json,xml
+    #accountingOrigin: 'none'    # choose 1 of : none|basic
+    #nodeDataLevel: 'none'       # choose 1 of : none|basic|advanced
+    #outputFormat: 'usertrace'   # comma separated list of : csv,json,xml,usertrace
+    #threadDataLevel: 'none'     # choose 1 of : none|basic
+  Archive:
+    #archivalOn: 'inactive'      # choose 1 of : active|inactive, default inactive
+                                 # Ensure Events.OperationalEvents.MQ|MQTT is set for outputFormat xml
+    #accountingOrigin: 'none'    # choose 1 of : none|basic
+    #majorInterval: 60           # Sets the interval in minutes at which archive statistics are published
+    #nodeDataLevel: 'none'       # choose 1 of : none|basic|advanced
+    #outputFormat: 'usertrace'   # comma separated list of : csv,xml,usertrace
+    #threadDataLevel: 'none'     # choose 1 of : none|basic
+  Resource:
+    #reportingOn: false          # choose 1 of : true|false, default false
+    #outputFormat: 'csvFile'     # choose 'csvFile', or 'file' for IIB v10 compatibility. if unset will default to ''
+
+UserExits:
+  #activeUserExitList: ''        # Specify the name of an installed user exit to activate.
+  #userExitPath: ''              # Specify the path or paths containing the user exists to be loaded. Multiple paths should be separated by colons on Unix and semi-colons on Windows.
+
+ConnectorProviders:
+  SAPConnectorProvider:
+    #jarsURL: 'default_Path'     # Set to the absolute path containing the SAP JCo JARs
+    #nativeLibs: 'default_Path'  # Set to the absolute path containing the SAP JCo libraries
+    #enableStandaloneIDocParsing: false # Set to true to enable using the DataObject parser in SAP ALE IDoc mode without having adapter components deployed
+  SiebelConnectorProvider:
+    #jarsURL: 'default_Path'     # Set to the absolute path containing the Siebel JARs.
+    #nativeLibs: 'default_Path'  # Set to the absolute path containing the Siebel libraries.
+    #siebelPropertiesURL:  ''    # Set to the location of the siebel.properties file.
+  PeopleSoftConnectorProvider:
+    #jarsURL: 'default_Path'     # Set to the absolute path containing the PeopleSoft JARs.
+  JDEdwardsConnectorProvider:
+    #jarsURL: 'default_Path'     # Set to the absolute path containing the JDEdwards JARs.
+    #nativeLibs: 'default_Path'  # Set to the absolute path containing the JDEdwards libraries.
+  #WSRRConnectorProvider:    # Requires the optional WSRR component install
+    #endpointAddress: 'https://host:9443/WSRR8_0/services/WSRRCoreSDOPort'   # WSRR server endpoint url
+    #needCache: true                                                         # enable WSRR cache
+    #predefinedCacheQueries: ''                                              # semicolon-separated XPath querys to initialize WSRR cache at start-up
+    #enableCacheNotification: false                                          # enable WSRR cache notification
+    #locationJNDIBinding:  'iiop://host:2809'                                # WSRR cache WAS JMS provider JNDI bindings url
+  #MyCustomProvider:
+    #connectorClassName: 'com.company.connector.hyper.LoopConnectorFactory'
+    #jarsURL: 'installation_directory/runtime/LoopConnector' # absolute path
+    #nativeLibs: 'default_Path' # absolute path or special value "default_Path"
+
+ELKConnections:
+  # Description for ELK Connections.
+  # elkConnection1:
+  #   elkProtocol: 'beats'                       # Logstash input protocol. Valid values are: 'beats', 'beatsTls', 'http', or 'https'.
+  #   hostname: 'myhost.domain.com'              # Hostname for the elkProtocol endpoint.
+  #   port: 0                                    # Port for the elkProtocol endpoint.
+  #   uploadIntervalMilliSecs: 60000             # Interval between uploading cached data, set in milliseconds.
+  #   elkCredential: ''                          # Set an 'elk' credential alias name to enable basic authentication, if it is required by the Logstash input protocol.
+  #   keystoreFile: '/path/to/keystore.jks'      # Set the path to the keystore to be used, if it is required by the Logstash input protocol.
+  #   keystorePass: 'P4s5w0rd'                   # Set the password, or 'keystore' credential alias to the password, of the keystore.
+  #   keyAlias: ''                               # Set the alias name of the private key, if mutual authentication is required by the Logstash input protocol.
+  #   keyPass: ''                                # Set the password, or 'keystorekey' credential alias to the password, for accessing the private mutual authentication key.
+  #   truststoreFile: '/path/tp/truststore.jks'  # Set the path to the truststore to be used, if it is required by the Logstash input protocol.
+  #   truststorePass: 'P4s5w0rd'                 # Set the password, or 'truststore' credential alias to the password, for accessing the truststore.

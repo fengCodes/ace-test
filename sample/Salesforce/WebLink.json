@@ -1,0 +1,206 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com WebLink object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/WebLink"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/WebLink"
+      }
+    }
+  ],
+  "definitions": {
+    "WebLink": {
+      "title": "WebLink",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DisplayType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EncodingKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "HasMenubar": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "HasScrollbars": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "HasToolbar": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Height": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "IsProtected": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsResizable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LinkType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MasterLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NamespacePrefix": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OpenType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PageOrSobjectType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Position": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RequireRowSelection": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ScontrolId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ShowsLocation": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ShowsStatus": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Width": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

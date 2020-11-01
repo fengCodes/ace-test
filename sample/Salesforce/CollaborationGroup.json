@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IBM-supplied JSON schema for Force.com CollaborationGroup object",
+  "description": "(C) Copyright IBM Corp. 2016 All Rights Reserved.",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/CollaborationGroup"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CollaborationGroup"
+      }
+    }
+  ],
+  "definitions": {
+    "CollaborationGroup": {
+      "title": "CollaborationGroup",
+      "additionalProperties": true,
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "type": [
+            "string"
+          ]
+        },
+        "AnnouncementId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CanHaveGuests": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "CollaborationType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CreatedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "FullPhotoUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "GroupEmail": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "HasPrivateFieldsAccess": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "InformationBody": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "InformationTitle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsArchived": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "IsAutoArchiveDisabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LastFeedModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedById": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastReferencedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastViewedDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "MemberCount": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "OwnerId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SmallPhotoUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SystemModstamp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
